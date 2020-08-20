@@ -5,6 +5,12 @@ valor_pago = float(input('Valor pago: '))
 
 preco_produto = float(input('Preço do produto: '))
 
-troco = valor_pago - preco_produto
+valor_desconto = float(input('Valor de desconto(%): '))
+
+desconto = valor_desconto/100
+
+novo_valor = preco_produto * (1-desconto)
+
+troco = valor_pago - novo_valor
 
 print('O troco a ser dado é R$', troco)
