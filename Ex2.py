@@ -3,17 +3,17 @@ e mostre-o por extenso. Este número deverá variar entre 1 e 5. Se o usuário i
 um número que não pertença a este intervalo, mostre a frase “número inválido”.'''
 
 print('Digite um número de 1 a 5: ')
-numero = int(input())
+num = int(input())
 
-if numero == 1:
+if num == 1:
     print('Um')
-elif numero == 2:
+elif num == 2:
     print('Dois')
-elif numero == 3:
+elif num == 3:
     print('Três')
-elif numero == 4:
+elif num == 4:
     print('Quatro')
-elif numero == 5:
+elif num == 5:
     print('Cinco')
 else:
     print('Número Inválido!')

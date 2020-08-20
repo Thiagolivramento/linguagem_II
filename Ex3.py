@@ -19,7 +19,7 @@ class Calculadora:
     def dividir(self, x, y):
         divisão = x / y
         print(divisão)
-
+//ficou massa ein.
 calcular = Calculadora()
 x = int(input('Primeiro Número: '))
 y = int(input('Segundo Número: '))
