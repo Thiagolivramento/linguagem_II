@@ -13,7 +13,7 @@ class Calculadora:
         print(subtração)
 
     def multiplicar(self, x, y):
-        multiplicação = (x * y)
+        multiplicação = (x * y) + 1
         print(multiplicação)
 
     def dividir(self, x, y):
