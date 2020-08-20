@@ -2,24 +2,24 @@
 multiplicação e divisão). O usuário deve informar dois números e o programa deve
 fazer as quatro operações.'''
 
-class Calculadora:
+class Calculadoramaisum:
 
     def somar(self, x, y):
-        soma = x + y
+        soma = (x + y) + 1
         print(soma)
 
     def subtrair(self, x, y):
-        subtração = x - y
+        subtração = (x - y) + 1
         print(subtração)
 
     def multiplicar(self, x, y):
-        multiplicação = x * y
+        multiplicação = (x * y) + 1
         print(multiplicação)
 
     def dividir(self, x, y):
-        divisão = x / y
+        divisão = (x / y) + 1
         print(divisão)
-//ficou massa ein.
+
 calcular = Calculadora()
 x = int(input('Primeiro Número: '))
 y = int(input('Segundo Número: '))
