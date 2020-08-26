@@ -2,7 +2,7 @@
 multiplicação e divisão). O usuário deve informar dois números e o programa deve
 fazer as quatro operações.'''
 
-class Calculadora:
+class Calculadoramaisum:
 
     def somar(self, x, y):
         soma = (x + y) + 1
@@ -17,7 +17,11 @@ class Calculadora:
         print(multiplicação)
 
     def dividir(self, x, y):
+<<<<<<< HEAD
         divisão =(x / y) + 1
+=======
+        divisão = (x / y) + 1
+>>>>>>> 0112c7ec17740fa5c8151e9520da05c10ebaf6ec
         print(divisão)
 
 calcular = Calculadora()
