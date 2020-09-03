@@ -16,7 +16,7 @@ util = Utils()
 
 
 while True:
-    numero = int(input("Digite um numero: ou -0 para sair: "))
-    util.add_lista(numero)
-    if numero == -0:
+    item = int(input("Digite um numero: ou -0 para sair: "))
+    util.add_lista(item)
+    if item == -0:
         break
