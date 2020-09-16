@@ -1,22 +1,34 @@
-#criando uma variavel lista
-lista = [] 
+class Classe:
+    def maior(self, lista):
+        print(f"Maior = {max(lista)}")
 
+    def soma(self, lista):
+        totalSoma = 0
+        for item in lista:
+            totalSoma += item;
+        print(f"Total = {totalSoma}")
+    
+    def ocorrencia(self, lista):
+        totalOcorrencia = 0
+        for  item in lista:
+            if lista[0] == item:
+                totalOcorrencia += 1;
+        print(f"Ocorrencias = {totalOcorrencia}")
+    
+    def media(self, lista):
+        total = 0
+        for item in lista:
+            total += item;
+        media = total / len(lista)
+        print(f"Media = {media}")
+        
+    
+resultado = Classe();
 
-#criando uma classe
-class Utils:
-#função adicionar item na lista
-    def add_lista(self, item):
-        lista.append(item)
-        print(lista)
-        print('a) Maior Elemento', max(lista))
-        print('b) Soma dos Elementos', sum(lista))
+lista = [1, 4, 1, 5, 6, 28, 4, 45, 22, 17, 98, 1]
+print(f'List = {lista}')
+resultado.maior(lista)
+resultado.soma(lista)
+resultado.ocorrencia(lista)
+resultado.media(lista)
 
-
-util = Utils()
-
-
-while True:
-    item = int(input("Digite um numero: ou -0 para sair: "))
-    util.add_lista(item)
-    if item == -0:
-        break
