@@ -3,6 +3,7 @@
 from cadastra import Cadastra
 from editar import Editar
 from delete import Delete
+from consulta import Consulta
 #conexao = MongoClient('localhost', 27017)
 #banco = conexao.prova
 #pessoas = banco.pessoa
@@ -25,7 +26,8 @@ def main():
             delete=Delete()
             delete.remove()
         elif opcao == '4':
-            consultar()
+            consulta=Consulta()
+            consulta.consultar()
         else:
             print('\n-OPÇÃO NÃO RECONHECIDA! ESCOLHA UMA DA LISTA DO MENU!-\n')
 
