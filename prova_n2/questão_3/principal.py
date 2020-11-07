@@ -1,7 +1,8 @@
 #from pymongo import MongoClient
 
 from cadastra import Cadastra
-
+from editar import Editar
+from delete import Delete
 #conexao = MongoClient('localhost', 27017)
 #banco = conexao.prova
 #pessoas = banco.pessoa
@@ -11,16 +12,18 @@ def main():
         opcao = input('|----Menu----|'
                       '\n|1-Cadastrar |'
                       '\n|2-Editar    |'
-                      '\n|3-Remover   |'
+                      '\n|3-Deletar   |'
                       '\n|4-Consultar |'
                       '\n\nEscolha uma das opções acima: ')
         if opcao == '1':
             cadastro=Cadastra()
             cadastro.cadastra()
         elif opcao == '2':
-            editar()
+            edita=Editar()
+            edita.edit()
         elif opcao == '3':
-            remover()
+            delete=Delete()
+            delete.remove()
         elif opcao == '4':
             consultar()
         else:
