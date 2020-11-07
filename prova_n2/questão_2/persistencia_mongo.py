@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-
+#ATIVIDADE DE PERSISTÊNCIA DE DADOS NO MONGODB - LINGUAGEM DE PROGRAMAÇÃO II
 conexao = MongoClient('localhost', 27017)
 banco = conexao.prova
 musica = banco.music
@@ -30,4 +30,12 @@ music = [
 
 musica.insert_many(music)
 
+print("-----------------------------------------------------------------")
 print("\n Cadastros realizados com sucesso no banco! És um monstro!\n")
+print("X")
+print("A")
+print("B")
+print("L")
+print("A")
+print("U")
+print("!")
