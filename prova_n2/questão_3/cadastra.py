@@ -14,7 +14,7 @@ class Cadastra:
                     "email": email
                 }
             )
-            print('\n-Dado inserido com sucesso-\n')
+            print('\n-CADASTRO RELIZADO COM SUCESSO!-\n')
 
         except Exception as e:
             print("Erro ao cadastrar!")
