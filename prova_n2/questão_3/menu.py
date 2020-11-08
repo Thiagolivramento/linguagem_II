@@ -50,7 +50,7 @@ while True:
             print('FORMATO DO CPF: 000.000.000.00')
             cpf = str(input('Digite o CPF para fazer alterações: '))
             temCPF = co.buscaCPF(cpf)
-            if temCpf:
+            if temCPF:
                 nome = str(input('Novo nome: '))
                 while True:
                     email = str(input('Novo email: '))
