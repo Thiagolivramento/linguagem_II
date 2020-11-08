@@ -3,7 +3,7 @@ class Editar:
 
     def edit(self):
         try:
-            pesquisar_cpf = input('\nInsira um cpf para editar1: ')
+            pesquisar_cpf = input('\nInsira um cpf para editar: ')
             editar_nome = input('\nNome: ')
             editar_email = input('\nE-mail: ')
 

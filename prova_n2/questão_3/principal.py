@@ -1,12 +1,12 @@
-#from pymongo import MongoClient
-
+from pymongo import MongoClient
 from cadastra import Cadastra
 from editar import Editar
 from delete import Delete
 from consulta import Consulta
-#conexao = MongoClient('localhost', 27017)
-#banco = conexao.prova
-#pessoas = banco.pessoa
+
+conexao = MongoClient('localhost', 27017)
+banco = conexao.prova
+pessoas = banco.pessoa
 
 def main():
     while(1):
