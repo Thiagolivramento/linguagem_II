@@ -1,0 +1,10 @@
+Bibliotecas utilizadas:
+
+
+- psycopg2: é o adaptador de banco de dados PostgreSQL muito utilizado na linguagem de programação Python. Suas características são a implementação completa da especificação Python DB API 2.0 e a segurança de thread (multi-thread), além disso ele também gerencia seu próprio pool de conexão. Ele foi projetado para aplicativos multi-threaded que trabalham muitos cursores e executam um grande número de INSERTs ou UPDATEs de forma simultânea. Outro ponto importante é que ele possui um wrapper de módulo Python fino para carregá-lo e fornecer algumas das funcionalidades de interface que são mais fáceis de escrever em Python puro.
+
+- pymongo: Biblioteca que permite a interação do Python com o MONGODB. Se caracteriza por ser um driver nativo do Python para o MongoDB.
+
+- email_validator: Esta biblioteca valida se uma string tem o formato name@example.com. Suas características são: Verifica se um endereço de e-mail tem a sintaxe correta;  Fornece mensagens de erro amigáveis quando a validação falha; Normaliza endereços de e-mail; Suporta nomes de domínio internacionalizados (opcional) e Verifica a capacidade de entrega: O nome de domínio resolve? (opcional).
+
+Sem essas bibliotecas os scripts desenvolvidos para a prova não iriam funcionar corretamente ou nem iriam iniciar. 

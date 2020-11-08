@@ -1,0 +1,7 @@
+PIP
+
+Mesmo possuindo um grande conjunto de pacotes, classes e funções na biblioteca padrão, o Python ainda precisa de algumas bibliotecas mais específicas dependedo do que pretendemos fazer. Por isso é comum baixarmos tais bibliotecas de terceiros utilizando o comando pip3 install NOME_DA_BIBLIOTECA.
+
+Caso você não tenha confiança em trabalhar com o terminal, existe a possibilidade de baixar a biblioteca no repositório do desenvolvedor. Outra forma é utilizando o gerenciador de pacotes. 
+
+O PIP é um gerenciador de pacotes padrão que tem acesso a um respositório de códigos com pacotes que foram construídos por terceiros e que podem ser utilizados em nossos códigos e nossas aplicações. PIP significa - Python Package Index. Toda a instalação Python executa a instalação de um pip na maquina. Utilizando o PIP via linha de comando podemos instalar, atualizar e remover pacotes python em nossa máquina. 
