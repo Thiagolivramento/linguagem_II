@@ -6,7 +6,7 @@ from consulta import Consulta
 
 conexao = MongoClient('localhost', 27017)
 banco = conexao.prova
-pessoas = banco.pessoa
+pessoa = banco.pessoa
 
 def main():
     while(1):

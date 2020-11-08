@@ -1,13 +1,28 @@
+from pymongo import MongoClient
+from validate import Validate
+
+conexao = MongoClient('localhost', 27017)
+banco = conexao.prova
+pessoa = banco.pessoa
 
 class Cadastra:
 
     def cadastra(self):
         try:
-            nome = input('\nNome: ')
-            cpf = input('\nCPF: ')
-            email = input('\nE-mail: ')
 
-            pessoas.insert_one(
+            nome = input('\nNome: ')
+            validarNome = Validate()
+            validarNome.validaNome(nome)
+
+            cpf = input('\nCPF: ')
+            validaCpf = Validate()
+            validaCpf.validaCpf(cpf)
+
+            email = input('\nE-mail: ')
+            validarEmail = Validate()
+            validarEmail.validaEmail(email)
+
+            pessoa.insert_one(
                 {
                     "nome": nome,
                     "cpf": cpf,

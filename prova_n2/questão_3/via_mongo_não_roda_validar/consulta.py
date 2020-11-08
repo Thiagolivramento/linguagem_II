@@ -1,3 +1,9 @@
+from pymongo import MongoClient
+
+conexao = MongoClient('localhost', 27017)
+banco = conexao.prova
+pessoa = banco.pessoa
+
 class Consulta:
 
     def consultar(self):
@@ -7,12 +13,12 @@ class Consulta:
                                     '\nDigite sua opção: ')
             if opcaoConsulta == '1':
                 consultaCpf = input('\nCPF: ')
-                resultado = pessoas.find({"cpf":consultaCpf})
+                resultado = pessoa.find({"cpf":consultaCpf})
                 for consulta in resultado:
                     print(consulta)
             elif opcaoConsulta == '2':
                 consultaEmail = input('\nE-mail: ')
-                resultado = pessoas.find({"email":consultaEmail})
+                resultado = pessoa.find({"email":consultaEmail})
                 for consulta in resultado:
                     print(consulta)
             else:
