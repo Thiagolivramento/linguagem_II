@@ -43,11 +43,11 @@ class Aluno():
                 connection.close()
 
 
-    def update(self, identificador, email):
+    def update(self, identificador):
         try:
             connection = Connection().getConnection()
             cursor = connection.cursor()
-            update = f"UPDATE from alunos WHERE identificador='{identificador}' and email='{email}'"
+            update = f"UPDATE alunos SET identificador='{identificador}';"
             cursor.execute(update)
             connection.commit()
             return f'Os dados do aluno com o identificador={identificador} foram atualizados no sistema'
