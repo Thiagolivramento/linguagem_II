@@ -17,30 +17,32 @@ def getAlunos():
 
 @app.route(f"/alunos/save", methods=['POST'])
 def createAluno():
-    nome = request.args.get('nome')
-    codigo = request.args.get('codigo')
+    name = request.args.get('nome')
+    identificador = request.args.get('identificador')
+    email = request.args.get('email')
     try:
-        return aluno.create(nome, codigo)
+        return aluno.create(name, identificador, email)
     except Exception as e:
         return (str(e))
     return
 
 
-@app.route(f"/aluno/update", methods=['PUT'])
+@app.route(f"/alunos/update", methods=['PUT'])
 def updateAluno():
-    codigo = request.args.get('codigo')
+    identificador = request.args.get('identificador')
+    email = request.args.get('email')
     try:
-        return aluno.update(codigo)
+        return aluno.update(identificador, email)
     except Exception as e:
         return (str(e))
     return
 
 
-@app.route(f"/aluno/delete", methods=['DELETE'])
+@app.route(f"/alunos/delete", methods=['DELETE'])
 def deleteAluno():
-    codigo = request.args.get('codigo')
+    identificador = request.args.get('identificador')
     try:
-        return aluno.delete(codigo)
+        return aluno.delete(identificador)
     except Exception as e:
         return (str(e))
     return

@@ -3,14 +3,14 @@ from init import Connection
 
 class Aluno():
 
-    def create(self, nome, codigo):
+    def create(self, name, identificador, email):
         try:
             connection = Connection().getConnection()
             cursor = connection.cursor()
-            insert = f"insert into public.alunos (nome, codigo) values ('{nome}', '{codigo}');"
+            insert = f"insert into public.alunos (name, identificador, email) values ('{name}', '{identificador}', '{email}');"
             cursor.execute(insert)
             connection.commit()
-            return f"Aluno {nome}({codigo}) foi cadastrado no sistema simples"
+            return f" O Aluno {name}({identificador}) foi cadastrado no sistema simples"
 
         except (Exception, psycopg2.DatabaseError) as error:
             print("Error", error)
@@ -31,7 +31,7 @@ class Aluno():
             if len(aluno):
                 return aluno
             else:
-                return 'Nenhum registro foi encontrado no sistema simples'
+                return 'Nenhum registro de aluno foi encontrado no sistema simples'
 
 
         except (Exception, psycopg2.Error) as error:
@@ -43,14 +43,14 @@ class Aluno():
                 connection.close()
 
 
-    def update(self, codigo):
+    def update(self, identificador, email):
         try:
             connection = Connection().getConnection()
             cursor = connection.cursor()
-            update = f"UPDATE from alunos WHERE codigo='{codigo}'"
+            update = f"UPDATE from alunos WHERE identificador='{identificador}' and email='{email}'"
             cursor.execute(update)
             connection.commit()
-            return f'O aluno codigo={codigo} foi atualizado no sistema'
+            return f'Os dados do aluno com o identificador={identificador} foram atualizados no sistema'
 
         except (Exception, psycopg2.Error) as error:
             print("Error", error)
@@ -60,14 +60,14 @@ class Aluno():
                 cursor.close()
                 connection.close()
 
-    def delete(self, codigo):
+    def delete(self, identificador):
         try:
             connection = Connection().getConnection()
             cursor = connection.cursor()
-            update = f"DELETE from alunos WHERE codigo='{codigo}';"
+            update = f"DELETE from alunos WHERE identificador='{identificador}';"
             cursor.execute(update)
             connection.commit()
-            return f'O aluno com codigo={codigo} foi deletado do sistema'
+            return f'Os dados do aluno com o identificador={identificador} foram deletados do sistema'
 
         except (Exception, psycopg2.Error) as error:
             print("Error", error)
